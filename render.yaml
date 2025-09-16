@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hianime-api
+    region: singapore
+    runtime: node
+    buildCommand: npm install -g bun && bun install
+    startCommand: bun run start
+    envVars:
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health
